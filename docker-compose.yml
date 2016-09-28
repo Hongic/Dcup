@@ -1,0 +1,40 @@
+version: '2'
+# 服务
+services: 
+
+  # 前端静态服务
+  nginx:
+    image: nginx:alpine
+    command: nginx -g 'daemon off;'
+    ports:
+      - "80:80"   # 主机：容器端口的映射
+    volumes:
+      - ./web/webhtml:/dcup/web  # 项目目录的映射
+      - ./nginx/log:/dcup/nginx/log # 日记目录的映射
+      - ./nginx/vhost/www.conf:/etc/nginx/conf.d/www.conf  # 虚拟主机配置的映射
+
+  # 后端动态服务
+  php-apache:
+    image: php:7.1-apache
+    command: apache2-foreground
+    ports:
+      - "88:80"  # 主机：容器端口的映射
+    volumes:
+      - ./web/webapi:/dcup/web  # 项目目录的映射
+      - ./php-apache/log:/dcup/php-apache/log  #日记目录的映射
+      - ./php-apache/vhost/www.conf:/etc/apache2/sites-enabled/www.conf   # 虚拟主机配置的映射
+
+  # 数据库服务  
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    # volumes:
+    #   - ./data:/var/lib/mysql   # mysql 存储的数据
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes  # root无密码登陆
+
+  # 缓存服务
+  redis:
+    image: redis:alpine
+
