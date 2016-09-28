@@ -1,7 +1,0 @@
-172.19.0.1 - - [26/Sep/2016:11:23:06 +0000] "GET / HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393" "-"
-172.18.0.1 - - [27/Sep/2016:03:14:08 +0000] "GET / HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36" "-"
-172.18.0.1 - - [27/Sep/2016:03:14:08 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "http://www.dcup.hongic.cc/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36" "-"
-172.18.0.1 - - [27/Sep/2016:03:14:09 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36" "-"
-172.18.0.1 - - [28/Sep/2016:03:57:02 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" "-"
-172.18.0.1 - - [28/Sep/2016:03:57:02 +0000] "GET / HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" "-"
-172.18.0.1 - - [28/Sep/2016:03:57:02 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "http://www.dcup.hongic.cc/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" "-"

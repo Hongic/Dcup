@@ -1,10 +1,17 @@
 <?php
-$dsn = 'mysql:dbname=mysql;host=mysql';
+$dsn = 'mysql:host=mysql;port=3306;dbname=db_caocc;charset=utf8'; // host 必须跟links一样
 $user = 'root';
 $password = '';
+
 try {
-    $mysqli = new mysqlnd("myapp", "username", "password", "database");
-    var_dump($mysqli);
+ 	$pdo = new PDO($dsn,$user,$password);
+ 	var_dump($pdo); 
+	$rs = $pdo -> query("select * from tb_user"); 
+    while($row = $rs -> fetch()){ 
+	  	print_r($row); 
+	}
 } catch (PDOException $e) {
     echo 'MySQL 服务连接失败 : ' . $e->getMessage();
 }
+
+ 
