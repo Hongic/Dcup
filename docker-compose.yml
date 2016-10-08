@@ -3,30 +3,31 @@ version: '2'
 services: 
 
   # # 前端静态服务
-  # nginx:
-  #   image: nginx:alpine
-  #   command: nginx -g 'daemon off;'
-  #   ports:
-  #     - "80:80"     # 主机：容器端口的映射
-  #   volumes:
-  #     - ./web/webhtml:/dcup/web            # 项目目录的映射
-  #     - ./nginx/log:/dcup/nginx/log        # 日记目录的映射
-  #     - ./nginx/vhost/www.conf:/etc/nginx/conf.d/www.conf   # 虚拟主机配置的映射
+  nginx:
+    image: nginx:alpine
+    command: nginx -g 'daemon off;'
+    ports:
+      - "80:80"     # 主机：容器端口的映射
+    volumes:
+      - ./web/webhtml:/dcup/web            # 项目目录的映射
+      - ./nginx/log:/dcup/nginx/log        # 日记目录的映射
+      - ./nginx/vhost/www.conf:/etc/nginx/conf.d/www.conf   # 虚拟主机配置的映射
 
   # # 后端动态服务
-  # php-apache:
-  #   # image: php:7.1-apache
-  #   build: ./php-apache
-  #   command: apache2-foreground
-  #   ports:
-  #     - "88:80"  # 主机：容器端口的映射
-  #   volumes:
-  #     - ./web/webapi:/dcup/web  # 项目目录的映射
-  #     - ./php-apache/log:/dcup/php-apache/log  #日记目录的映射
-  #     - ./php-apache/php.ini:/usr/local/etc/php/conf.d/php.ini # php 配置文件的映射
-  #     - ./php-apache/vhost/www.conf:/etc/apache2/sites-enabled/www.conf   # 虚拟主机配置的映射
-  #   links:
-  #     - mysql # 连接mysql容器，也是php操作数据库的域host
+  php-apache:
+    # image: php:7.1-apache
+    build: ./php-apache
+    command: apache2-foreground
+    ports:
+      - "88:80"  # 主机：容器端口的映射
+    volumes:
+      - ./web/webapi:/dcup/web  # 项目目录的映射
+      - ./php-apache/log:/dcup/php-apache/log  #日记目录的映射
+      - ./php-apache/php.ini:/usr/local/etc/php/conf.d/php.ini # php 配置文件的映射
+      - ./php-apache/vhost/www.conf:/etc/apache2/sites-enabled/www.conf   # 虚拟主机配置的映射
+    links:
+      - mysql # 连接mysql容器，也是php操作数据库的域host
+      - redis     
 
 
   # # 数据库服务  
@@ -40,9 +41,11 @@ services:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes  # root无密码登陆
 
-  # # 缓存服/etc/mysql/conf.d    # 数据库配置文件
-  # redis:
-  #   image: redis:alpine
+  # # 缓存服务
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"  # 主机：容器端口的映射
 
 # # 数据卷
 # volume:

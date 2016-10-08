@@ -1,0 +1,1 @@
+2016/10/08 03:05:16 [error] 5#5: *1 open() "/dcup/web/www/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: www.dcup.hongic.cc, request: "GET /favicon.ico HTTP/1.1", host: "www.dcup.hongic.cc", referrer: "http://www.dcup.hongic.cc/"

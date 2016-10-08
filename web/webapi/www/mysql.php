@@ -5,9 +5,10 @@ $password = '';
 
 try {
  	$pdo = new PDO($dsn,$user,$password);
- 	var_dump($pdo); 
+ 	
 	$rs = $pdo -> query("select * from tb_user"); 
-    while($row = $rs -> fetch()){ 
+
+    while($row = $rs ->fetch()){ 
 	  	print_r($row); 
 	}
 } catch (PDOException $e) {

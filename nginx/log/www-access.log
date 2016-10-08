@@ -1,0 +1,2 @@
+172.18.0.1 - - [08/Oct/2016:03:05:16 +0000] "GET / HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36" "-"
+172.18.0.1 - - [08/Oct/2016:03:05:16 +0000] "GET /favicon.ico HTTP/1.1" 404 571 "http://www.dcup.hongic.cc/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36" "-"
