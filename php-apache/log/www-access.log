@@ -10,3 +10,5 @@
 172.18.0.1 - - [10/Oct/2016:02:24:07 +0000] "GET /redis.php HTTP/1.1" 200 231 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36"
 172.18.0.1 - - [10/Oct/2016:02:25:20 +0000] "GET /redis.php HTTP/1.1" 200 256 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36"
 172.18.0.1 - - [10/Oct/2016:02:25:22 +0000] "GET /redis.php HTTP/1.1" 200 255 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36"
+172.18.0.1 - - [10/Oct/2016:02:41:36 +0000] "GET /redis.php HTTP/1.1" 200 256 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36"
+172.18.0.1 - - [10/Oct/2016:02:41:44 +0000] "GET / HTTP/1.1" 200 255 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36"
