@@ -8,9 +8,8 @@ try {
  	
 	$rs = $pdo -> query("select * from tb_user"); 
 
-    while($row = $rs ->fetch()){ 
-	  	print_r($row); 
-	}
+	echo " mysql 服务运行 ... ";
+    
 } catch (PDOException $e) {
     echo 'MySQL 服务连接失败 : ' . $e->getMessage();
 }

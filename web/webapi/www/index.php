@@ -1,3 +1,3 @@
 <?php
 
-echo "擦操哦擦";
+echo "apache 服务运行 ...";
